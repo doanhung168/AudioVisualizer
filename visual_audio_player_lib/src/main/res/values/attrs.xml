@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecordingVisualAudioPlayer">
+        <attr name="vap_wavePercent" format="float" />
+        <attr name="vap_waveOffset" format="dimension" />
+        <attr name="vap_waveWidth" format="dimension" />
+        <attr name="vap_waveColor" format="color" />
+        <attr name="vap_timeLineColor" format="color"/>
+        <attr name="vap_timeLineWidth" format="dimension"/>
+    </declare-styleable>
+</resources>

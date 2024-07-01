@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity">
+
+    <com.doan_hung.visual_audio_player_lib.CutVisualAudioPlayer
+        android:id="@+id/visualizer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/spacing_double"
+        android:background="#F9F9F9"
+        app:layout_constraintBottom_toTopOf="@id/timeline_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:vap_waveColor="#F55084"
+        app:vap_waveOffset="4dp"
+        app:vap_wavePercent="0.01"
+        app:vap_waveWidth="1dp" />
+
+    <TextView
+        android:id="@+id/timeline_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_double"
+        android:text="@string/zero_time"
+        android:textColor="@color/primaryLight"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/play_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/play_button"
+        style="@style/IIVisuApp.CircleIconButton"
+        android:layout_margin="@dimen/spacing_double"
+        app:icon="@drawable/ic_play_arrow_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/IIVisuApp.ShapeAppearanceOverlay.Button.Circle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/seek_forward_button"
+        style="@style/IIVisuApp.CircleIconButton"
+        android:layout_margin="@dimen/spacing_double"
+        app:icon="@drawable/ic_forward_5_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/play_button"
+        app:shapeAppearanceOverlay="@style/IIVisuApp.ShapeAppearanceOverlay.Button.Circle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/seek_backward_button"
+        style="@style/IIVisuApp.CircleIconButton"
+        android:layout_margin="@dimen/spacing_double"
+        app:icon="@drawable/ic_backward_5_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/play_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/IIVisuApp.ShapeAppearanceOverlay.Button.Circle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
